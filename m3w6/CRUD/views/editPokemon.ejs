@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Database</title>
+</head>
+<body>
+    <h1>Welcome to my database of current pokemon!</h1>
+    <p>Edit your existing pokemon:</p>
+    <form action="/edit/<%=pokemon.id%>" method="POST">
+        <label for="pokemonName">Edit Pokemon name:</label>
+        <input id="pokemonName" type="text" name="pokemonName" value="<%=pokemon.pokemonName%>"><br>
+        <label for="pokemonLevel">What is the level of your Pokemon?</label>
+        <input id="pokemonLevel" type="text" name="pokemonLevel" value="<%=pokemon.level%>"><br>
+        <label for="pokemonType">What is the type of your Pokemon?</label>
+        <input id="pokemonType" type="text" name="pokemonType" value="<%=pokemon.type%>"><br>
+        <!-- <input type="submit"> -->
+        <button type="submit">Submit!</button>
+    </form>
+</body>
+</html>

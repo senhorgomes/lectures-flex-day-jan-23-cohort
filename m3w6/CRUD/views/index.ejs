@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Database</title>
+</head>
+<body>
+    <h1>Welcome to my database of current pokemon!</h1>
+    <p>List of pokemon:</p>
+    <ul>
+        <% for(const pokemon of pokemonDatabase) {%>
+            <li><%= pokemon.pokemonName %> is level <%= pokemon.level %>, 
+                and has a type of <%= pokemon.type %>.</li>
+                <a href="/edit/<%=pokemon.id%>">
+                    Edit this pokemon!
+                </a>
+                <form action="/release/<%=pokemon.id%>" method="POST">
+                    <input type="SUBMIT" value="Release this pokemon!">
+                </form>
+        <% } %>
+    </ul>
+</body>
+</html>
